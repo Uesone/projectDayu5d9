@@ -5,7 +5,9 @@ import UmbertoAmoroso.projectDayu5d9.services.DipendenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -44,5 +46,11 @@ public class DipendenteController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteDipendente(@PathVariable Long id) {
         dipendenteService.deleteDipendente(id);
+    }
+
+
+    @PostMapping("/{employeeId}/avatar")
+    public Dipendente uploadAvatar(@PathVariable Long employeeId, @RequestParam("avatar") MultipartFile image) throws IOException {
+        return this.dipendenteService.uploadImage(employeeId, image);
     }
 }
