@@ -1,13 +1,15 @@
 package UmbertoAmoroso.projectDayu5d9.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 @Entity
 public class Booking {
     @Id
@@ -23,4 +25,6 @@ public class Booking {
     private LocalDate dataRichiesta;
 
     private String note;
+
+    private String preferenze;
 }
