@@ -1,10 +1,14 @@
 package UmbertoAmoroso.projectDayu5d9.payloads;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Setter
 @Getter
+@NoArgsConstructor
+@ToString
 
 public class DipendenteCreateDTO {
     private String username;

@@ -1,10 +1,11 @@
 package UmbertoAmoroso.projectDayu5d9.payloads;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
+@NoArgsConstructor
+@ToString
 
 
 public class DipendenteDTO {
