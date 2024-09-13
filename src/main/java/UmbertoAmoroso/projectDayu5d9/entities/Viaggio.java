@@ -1,4 +1,5 @@
 package UmbertoAmoroso.projectDayu5d9.entities;
+import UmbertoAmoroso.projectDayu5d9.enums.StatoViaggio;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,4 +19,7 @@ public class Viaggio {
     private LocalDate data;
 
 
+    public void setStato(StatoViaggio statoViaggio) {
+
+    }
 }
